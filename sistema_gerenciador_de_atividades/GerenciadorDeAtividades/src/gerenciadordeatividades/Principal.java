@@ -21,10 +21,15 @@ public class Principal {
         a.setId(1);
         a.setDescricao("Lavar o carro");
         
+        Atividade a2 = new Atividade();
+        a2.setId(2);
+        a2.setDescricao("Fazer compras");
+        
         
         // Inserir atividade no banco de daodos
         AtividadeRepositoty ar = new AtividadeRepositoty();
         ar.inserir(a);
+        ar.inserir(a2);
     }
     
 }
