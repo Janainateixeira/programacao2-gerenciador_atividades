@@ -1,1 +1,1 @@
-# programacao2-gerenciador_atividades
+# Atividade da disciplina de programação II
