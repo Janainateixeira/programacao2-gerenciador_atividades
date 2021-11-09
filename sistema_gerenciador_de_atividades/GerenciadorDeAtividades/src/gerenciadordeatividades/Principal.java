@@ -15,7 +15,16 @@ public class Principal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        // Criar uma atividade qualquer
+        Atividade a = new Atividade();
+        a.setId(1);
+        a.setDescricao("Lavar o carro");
+        
+        
+        // Inserir atividade no banco de daodos
+        AtividadeRepositoty ar = new AtividadeRepositoty();
+        ar.inserir(a);
     }
     
 }
