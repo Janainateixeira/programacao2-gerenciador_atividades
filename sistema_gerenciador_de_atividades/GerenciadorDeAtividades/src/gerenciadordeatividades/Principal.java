@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package gerenciadordeatividades;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 
 /**
  *
@@ -11,23 +9,19 @@ package gerenciadordeatividades;
  */
 public class Principal {
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         
         // Criar uma atividade qualquer
-        Atividade a = new Atividade();
-        a.setId(1);
+        Atividade a = new Atividade();        
         a.setDescricao("Lavar o carro");
         
-        Atividade a2 = new Atividade();
-        a2.setId(2);
+        Atividade a2 = new Atividade();        
         a2.setDescricao("Fazer compras");
         
         
         // Inserir atividade no banco de daodos
-        AtividadeRepositoty ar = new AtividadeRepositoty();
+        AtividadeRepository ar = new AtividadeRepository();
         ar.inserir(a);
         ar.inserir(a2);
     }

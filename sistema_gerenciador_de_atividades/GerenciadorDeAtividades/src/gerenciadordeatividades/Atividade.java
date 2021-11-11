@@ -6,12 +6,13 @@ package gerenciadordeatividades;
 
 /**
  * Entidade que representa uma atividade
+ *
  * @author ivanr
  */
 public class Atividade {
-    
+
     private int id;
-    private String descricao; 
+    private String descricao;
 
     public int getId() {
         return id;
@@ -27,5 +28,5 @@ public class Atividade {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }    
+    }
 }
