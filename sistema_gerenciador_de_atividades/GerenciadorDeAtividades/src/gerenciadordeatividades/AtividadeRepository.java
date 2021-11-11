@@ -17,11 +17,12 @@ import java.sql.SQLException;
  */
 public class AtividadeRepository {
 
-    public void inserir(Atividade atividade) {
+    public void inserir(Atividade a) {
         
         try {
             Connection cx = ConnectionFactory.createConnection();
-            PreparedStatement ps = cx.prepareStatement("insert into atividade (Descricao) values ('" + atividade.getDescricao() + "')");
+            PreparedStatement ps = cx.prepareStatement("insert into atividade (Descricao) values (?)");
+            ps.setString(1,a.getDescricao());
             ps.execute();
         } catch (Exception e) {
             e.printStackTrace();
