@@ -33,9 +33,4 @@ public class AtividadeRepository {
         //TODO: implentar alistagem de atividade do banco de dados
         return null;
     }
-
 }
-        /*Atividade atividade = null;
-        atividade = DriverManager.getConnection(url, user, password);
-
-        return atividade;*/
