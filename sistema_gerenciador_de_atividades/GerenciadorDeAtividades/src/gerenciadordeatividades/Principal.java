@@ -2,6 +2,7 @@ package gerenciadordeatividades;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.List;
 
 /**
  *
@@ -17,13 +18,19 @@ public class Principal {
         a.setDescricao("Lavar o carro");
         
         Atividade a2 = new Atividade();        
-        a2.setDescricao("Fazer compras");
-        
+        a2.setDescricao("Fazer compras");        
         
         // Inserir atividade no banco de daodos
         AtividadeRepository ar = new AtividadeRepository();
         ar.inserir(a);
         ar.inserir(a2);
+        
+        List<Atividade> atividades = ar.listar();
+        Atividade primeiraAtividade = atividades.get(0);
+        System.out.println("Atividade descricao: " + primeiraAtividade.getDescricao());
+             
+        
+      
     }
     
 }

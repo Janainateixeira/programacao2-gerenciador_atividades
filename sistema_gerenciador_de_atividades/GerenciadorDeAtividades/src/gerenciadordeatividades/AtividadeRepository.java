@@ -30,7 +30,7 @@ public class AtividadeRepository {
         }
     }
 
-    public List listar() {
+    public List<Atividade> listar() {
         //TODO: implentar alistagem de atividade do banco de dados
         return null;
     }
