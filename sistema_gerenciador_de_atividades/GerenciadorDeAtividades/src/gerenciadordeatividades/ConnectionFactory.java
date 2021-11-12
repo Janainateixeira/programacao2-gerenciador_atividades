@@ -19,10 +19,9 @@ public class ConnectionFactory {
     public static Connection createConnection() throws SQLException{
         String url = "jdbc:mysql://localhost:3306/atividades ";
         String user = "root";
-        String password = "";
-        
-        Connection conexao = DriverManager.getConnection(url, user, password);
+        String password = "";     
+       
 
-        return conexao;
+        return DriverManager.getConnection(url, user, password);
     }
 }
